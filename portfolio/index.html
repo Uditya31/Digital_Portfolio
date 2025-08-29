@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Portfolio-Procoder09</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Portfolio</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="#main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="#about"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="#work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Work</a>
+            <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+        </div>
+    </header>
+
+    <section class="main" id="main">
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Hello, I'm <br><span>Uditya Nath Patel</span></h2>
+            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+                <h3>Student</h3>
+                <h3>Beginer</h3>
+                <h3>Programmer</h3>
+            </div>
+          
+        </div>
+    </section>
+
+<!--  About Section -->
+
+    <section class="about" id="about">
+        <div class="title reveal">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+        </div>
+        <div class="content">
+            <div class="column col-right reveal">
+                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hello, I am Uditya</h2>
+                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">This is my first digital portfolio.</p>
+             
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Work Section -->
+    <section class="work" id="work">
+        <div class="title">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My Work</h2>
+        </div>
+        <div class="content">
+            <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card-img">
+                    <img src="C:\Users\HP\OneDrive\Pictures\Screenshots\Screenshot (4).png" alt="">
+                    
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card-img">
+                    <img src="Image/work2.jpg" alt="">
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card-img">
+                    <img src="Image/work3.jpg" alt="">
+                </div>
+            </div>
+          
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="title reveal">
+          <h2 class="section-title">Contact Me</h2>
+         <form action="https://formspree.io/f/xovnvpdo" method="POST">
+          <div class="row">
+            <div class="contact-form reveal">
+              <h3>Send Message</h3>
+              <div class="input-box">
+                 <label for="name" class="block mb-2 font-medium">Your Name</label>
+                  <input type="text" Name="name" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+              </div>
+              <div class="input-box">
+                   <label for="email" class="block mb-2 font-medium">Your Email</label>
+                    <input type="email" Name="email" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+              </div>
+              <div class="input-box">
+                 <label for="message" class="block mb-2 font-medium">Message</label>
+                 <textarea Name="message" rows="5" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required></textarea>
+              </div>
+              <div class="input-box">
+                 <input type="submit" class="send-btn" name="" value="Send">
+              </div>
+            </div>
+        </form>
+          </div>
+        </div>
+      </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>
